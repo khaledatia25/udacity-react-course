@@ -1,38 +1,176 @@
 .App {
   text-align: center;
 }
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+  height: 100vh;
+}
+html {
+  scroll-behavior: smooth;
+}
+.parent {
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Small  */
+@media (min-width: 768px){
+  .container {
+      width: 750px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Mediem */
+@media (min-width: 992px) {
+  .container {
+      width: 970px;
+  }
+}
+
+/* Large  */
+@media (min-width: 1200px) {
+  .container {
+      width: 1170px;
+  }
+}
+.body {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+}
+@media(max-width:900px){
+  .body {
+    flex-wrap: wrap;
+  }
+}
+.half-container {
+  min-width: 350px;
+}
+/* End Global Rules */
+/*Start Header Style */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(36, 182, 140);
+  color: white;
+  position: relative;
+}
+.header >span{
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  font-size: 10px;
+}
+/* End Header Style */
+/* Start Userform Style */
+.user-form{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* height: 50px; */
+  padding-top: 20px;
+
+}
+.user-form input {
+  outline: none;
+  background-color: none;
+  border: 3px solid rgb(36, 182, 140);
+  border-radius: 5px;
+  height: 50px;
+  margin-bottom: 20px;
+  width: 300px;
+
+}
+.user-form button {
+  height: 50px;
+  width: 120px;
+  outline: none;
+  background-color: rgb(36, 182, 140);
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+}
+.container > h2 {
+  /* width: 300px; */
+  color: rgb(36, 182, 140);
+  font-size: 30px;
+  padding: 0;
+  margin: 0;
+  height: 50px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 20px;
+}
+/* End Userform Style */
+/* Start Users List */
+.user-list{
+  padding-top: 20px;
+}
+.user-list-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user-list-top h3 {
+  color: rgb(36, 182, 140);
+  font-size: 30px;
+  padding: 0;
+  margin: 0;
+}
+.user-list-top button {
+  height: 50px;
+  width: 120px;
+  outline: none;
+  background-color: white;
+  color: rgb(36, 182, 140);
+  font-size: 18px;
+  border-radius: 5px;
+  border: 2px solid rgb(36, 182, 140);
+}
+.user-list ul {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+
+}
+.user-list ul li {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  justify-content: start;
+  width: 100%;
 
-.App-link {
-  color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.user-list ul li h3 {
+  text-align: left;
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
 }
+.user-list ul li div {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+}
+.user-list ul li div p {
+  margin-right: 20px;
+}
+/* End Users List */
